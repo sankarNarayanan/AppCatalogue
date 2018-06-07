@@ -95,7 +95,7 @@ def get_json():
     except Exception as e:
     	print('error');
     	ret = "error"
-        return Response(json.dumps(ret),status=400,mimetype='application/json')
+    	return Response(json.dumps(ret),status=400,mimetype='application/json')
 
 @app.route('/images/<path:path>')
 def send_img(path):
