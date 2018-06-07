@@ -87,6 +87,7 @@ def get_json():
             else:
                 return '{"Success":"Inside post else"}';
     except Exception as e:
+    	print('error')
         ret = "error"
         return Response(json.dumps(ret),status=400,mimetype='application/json')
 
