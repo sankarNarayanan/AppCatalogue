@@ -94,7 +94,7 @@ def get_json():
                 return '{"Success":"Inside post else"}'
     except Exception as e:
     	print('error');
-        ret = "error"
+    	ret = "error"
         return Response(json.dumps(ret),status=400,mimetype='application/json')
 
 @app.route('/images/<path:path>')
