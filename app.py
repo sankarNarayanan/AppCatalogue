@@ -70,28 +70,28 @@ def get_json():
                 content = request.get_json();
                 if content['username'] == 'admin' and content['password']=='admin':
                 	print("admin");
-                	return '{"Success":"True"}'
+                	return '{"status":"success"}'
 
                 elif content['username'] == 'sankar' and content['password']=='sankar@123':
                 	print("sankar");
-                	return '{"Success":"True"}'
+                	return '{"status":"success"}'
 
                 elif content['username'] == 'sheenam.ohrie' and content['password']=='sheenam@123':
                 	print("sheenam");
-                	return '{"Success":"True"}'
+                	return '{"status":"success"}'
 
                 elif content['username'] == 'akta.jain' and content['password']=='akta@123':
                 	print("akta");
-                	return '{"Success":"True"}'
+                	return '{"status":"success"}'
                 
                 elif content['username'] == 'mathew.basilthomas' and content['password']=='mathew@123':
                 	print("mathew");
-                	return '{"Success":"True"}'
+                	return '{"status":"success"}'
                 else:
                 	print("wrong");
-                	return '{"Success":"Flase"}'
+                	return '{"status":"failure"}'
             else:
-                return '{"Success":"Inside post else"}'
+                return '{"status":"failure"}'
     except Exception as e:
     	print('error');
     	ret = "error"
