@@ -64,36 +64,36 @@ def get_json():
             #     print("headers work my lord")
             return Response(json.dumps(ret), status=200, mimetype='application/json')
         elif request.method=="POST":
-            print(request.headers);
+            #print(request.headers);
             print(request.get_json());
             if request.headers['Content-Type'] == 'application/json':
                 content = request.get_json();
                 if content['username'] == 'admin' and content['password']=='admin':
-                	print("admin")
-                    return '{"Success":"True"}'
+                	print("admin");
+                	return '{"Success":"True"}'
 
                 elif content['username'] == 'sankar' and content['password']=='sankar@123':
-                	print("sankar")
+                	print("sankar");
                     return '{"Success":"True"}'
 
                 elif content['username'] == 'sheenam.ohrie' and content['password']=='sheenam@123':
-                	print("sheenam")
+                	print("sheenam");
                     return '{"Success":"True"}'
 
                 elif content['username'] == 'akta.jain' and content['password']=='akta@123':
-                	print("akta")
+                	print("akta");
                     return '{"Success":"True"}'
                 
                 elif content['username'] == 'mathew.basilthomas' and content['password']=='mathew@123':
-                	print("mathew")
+                	print("mathew");
                     return '{"Success":"True"}'
                 else:
-                	print("wrong")
+                	print("wrong");
                     return '{"Success":"Flase"}'
             else:
                 return '{"Success":"Inside post else"}'
     except Exception as e:
-    	print('error')
+    	print('error');
         ret = "error"
         return Response(json.dumps(ret),status=400,mimetype='application/json')
 
