@@ -2,8 +2,10 @@ from flask import Flask
 from flask import request, send_from_directory
 from flask import json
 from flask import Response
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+CORS(app)
 
 ##url="http://127.0.0.1:5000"
 
